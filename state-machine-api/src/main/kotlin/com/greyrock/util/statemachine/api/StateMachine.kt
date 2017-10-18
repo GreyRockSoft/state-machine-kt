@@ -6,5 +6,5 @@ interface StateMachine<T: Enum<*>>: Runnable {
 }
 
 interface StateFactory<T: Enum<*>> {
-    fun createState(): MachineState<T>
+    fun createState(stateMachine: StateMachine<T>): MachineState<T>
 }

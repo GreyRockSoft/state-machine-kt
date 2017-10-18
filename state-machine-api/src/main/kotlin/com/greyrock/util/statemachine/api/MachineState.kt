@@ -2,6 +2,7 @@ package com.greyrock.util.statemachine.api
 
 interface MachineState <T: Enum<*>>: Runnable {
     fun transition()
-    fun validTransitions(): ImmutableSet<T>
-    fun getRotationState(): T
+    val validTransitions: ImmutableSet<T>
+    val state: T
+    val stateMachine: StateMachine<T>
 }
