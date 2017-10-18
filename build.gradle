@@ -38,10 +38,3 @@ project(':state-machine-core') {
         compile project(':state-machine-api')
     }
 }
-
-project(':state-machine-guice') {
-    dependencies {
-        compile project(':state-machine-api')
-        compile project(':state-machine-core')
-    }
-}
